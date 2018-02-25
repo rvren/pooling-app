@@ -1,0 +1,106 @@
+.Card-container {
+  height: 60vh;
+  display: flex !important;
+  flex-direction: row !important;
+  background: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Pool-header {
+  color: #fff;
+  margin: 4rem;
+  font-size: 1.4rem;
+}
+
+.Pool-subcontent {
+  color: #fff;
+  margin: 4rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  line-height: 36px;
+  word-wrap: break-word;
+}
+
+.Pool-content {
+  background: url(http://mobi-platform.com/wp-content/uploads/2014/07/Rideshare-superJumbo.jpg), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  border-radius: 8px 0px 0px 8px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-width: 30vw;
+}
+
+.Login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px;
+  margin: 12px;
+  margin-top: -16px;
+  min-width: 25vw;
+}
+
+.Vertical-divider {
+  color: #e50914;
+  margin: 8px;
+}
+
+.Cta-primary {
+  display: block;
+  justify-content: center;
+  align-self: center;
+  background-color: #db0510 !important;
+}
+
+.Card-header {
+  background: linear-gradient(to right, #e50914 0%, #db0510 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.Card-header--subcontent {
+  color: #000000;
+  margin-left: 2rem;
+  margin-top: -2rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.Input-text {
+  width: 100% !important;
+}
+
+.Register-content--text {
+  font-size: 0.8rem;
+  color: #CCCCCC;
+  text-align: center;
+  margin: 2rem;
+}
+
+.Register-content--subtext {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e50914;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+}

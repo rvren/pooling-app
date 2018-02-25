@@ -7,6 +7,22 @@
   flex-direction: row;
 }
 
+.Card-wrapper {
+  height: auto;
+  max-height: 40vh;
+  margin: 4rem;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  padding: 8px;
+}
+
+.Card-wrapper:hover {
+  height: auto;
+  max-height: 40vh;
+  margin: 4rem;
+  border-radius: 8px !important;
+}
+
 @media (max-width: 480px) {
   .Checkout-Card-container {
     width: 100%;

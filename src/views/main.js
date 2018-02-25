@@ -2,16 +2,17 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-import Home from "../components/Home";
-import Login from "../components/Home";
-import Register from "../components/Home";
-import Ride from "../components/Home";
+import Home from "../views/Home";
+import Login from "../components/Login";
+import Register from "../components/Register";
+import Ride from "../components/Login";
 
 const muiTheme = getMuiTheme({
+  fontFamily: "Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif",
   palette: {
-    textColor: "#333333",
+    textColor: "#000000",
     primary1Color: "#e50914",
-    backgroundColor: "#333"
+    canvasColor: '#000',
   }
 });
 
@@ -20,12 +21,12 @@ class Root extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <BrowserRouter>
-          <div>
+          <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
+            <Route exact path="/login" component={Home} />
+            <Route exact path="/register" component={Register} />
             <Route path="/ride" component={Ride} />
-          </div>
+          </Switch>
         </BrowserRouter>
       </MuiThemeProvider>
     );
