@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import "./styles.css";
 import TextField from "material-ui/TextField";
-import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
-import RaisedButton from "material-ui/RaisedButton";
+import FlatButton from "material-ui/FlatButton";
 import { Link } from "react-router-dom";
 import Legend from "../Legend";
-
-const style = {
-  margin: 12
-};
 
 class Register extends Component {
   render() {
@@ -18,7 +13,7 @@ class Register extends Component {
           <div className="Card-container">
             <Legend />
             <div className="Card-content">
-              <h6 className="Card-header">Register</h6>
+              <h6 className="Card-header">REGISTER</h6>
               <h6 className="Card-header--subcontent">
                 Save time and money by logging in to the app
               </h6>
@@ -45,7 +40,7 @@ class Register extends Component {
                 />
                 <TextField
                   hintText="Re-enter your secret password"
-                  floatingLabelText="Password"
+                  floatingLabelText="Re-enter Password"
                   className="Input-text"
                 />
                 <TextField
@@ -54,7 +49,7 @@ class Register extends Component {
                   className="Input-text"
                 />
                 <br />
-                <RaisedButton label="REGISTER" className="Cta-primary" />
+                <FlatButton label="REGISTER" className="Cta-primary" />
                 <p className="Register-content--text">
                   Already have an account?
                   <Link to="/login" className="Register-content--subtext">

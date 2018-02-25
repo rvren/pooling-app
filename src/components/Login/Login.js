@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import "./styles.css";
 import TextField from "material-ui/TextField";
-import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
-import RaisedButton from "material-ui/RaisedButton";
 import { Link } from "react-router-dom";
 import Legend from "../Legend";
-
-const style = {
-  margin: 12
-};
+import FlatButton from "material-ui/FlatButton";
 
 class Login extends Component {
   render() {
@@ -34,7 +29,7 @@ class Login extends Component {
                   className="Input-text"
                 />
                 <br />
-                <RaisedButton label="LOGIN" className="Cta-primary" />
+                <FlatButton label="LOGIN" className="Cta-primary" />
                 <p className="Register-content--text">
                   Don't have an account?
                   <Link to="/register" className="Register-content--subtext">

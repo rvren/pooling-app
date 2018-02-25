@@ -10,38 +10,6 @@
   transform: translate(-50%, -50%);
 }
 
-.Pool-header {
-  color: #fff;
-  margin: 4rem;
-  font-size: 1.4rem;
-}
-
-.Pool-subcontent {
-  color: #fff;
-  margin: 4rem;
-  font-size: 1.2rem;
-  font-weight: 100;
-  font-family: "Roboto", sans-serif;
-  line-height: 36px;
-  word-wrap: break-word;
-}
-
-.Pool-content {
-  background: url(http://mobi-platform.com/wp-content/uploads/2014/07/Rideshare-superJumbo.jpg), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  border-radius: 8px 0px 0px 8px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-width: 30vw;
-}
-
 .Login-form {
   display: flex;
   flex-direction: column;
@@ -52,14 +20,11 @@
   min-width: 25vw;
 }
 
-.Vertical-divider {
-  color: #e50914;
-  margin: 8px;
-}
 
 .Cta-primary {
   background-color: #db0510 !important;
-  border-radius: 16px !important;
+  color: #ffffff !important;
+  border-radius: 250px !important;
   width: 100% !important;
 }
 

@@ -1,13 +1,5 @@
 import React, { Component } from "react";
 import "./styles.css";
-import TextField from "material-ui/TextField";
-import { Card, CardActions, CardHeader, CardText } from "material-ui/Card";
-import RaisedButton from "material-ui/RaisedButton";
-import { orange500, blue500 } from "material-ui/styles/colors";
-
-const style = {
-  margin: 12
-};
 
 class Legend extends Component {
   render() {
