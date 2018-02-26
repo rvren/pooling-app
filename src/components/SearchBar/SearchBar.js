@@ -95,10 +95,7 @@ class SearchBar extends Component {
   renderGeocodeSuccess(lat, lng) {
     return (
       <div className="alert alert-success" role="alert">
-        <strong>Success!</strong> Geocoder found latitude and longitude:{" "}
-        <strong>
-          {lat}, {lng}
-        </strong>
+       
       </div>
     );
   }

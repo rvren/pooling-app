@@ -5,6 +5,7 @@ import PlacesAutocomplete, {
   getLatLng
 } from "react-places-autocomplete";
 import SearchBar from "../../components/SearchBar";
+import FlatButton from "material-ui/FlatButton";
 
 class Ride extends Component {
   constructor(props) {
@@ -28,23 +29,39 @@ class Ride extends Component {
       onChange: this.onChange
     };
 
-  
-
     return (
       <div className="Ride-wrapper">
-        <div className="Ride-content-wrapper">
-          <div className="Ride-card-container">
-          <SearchBar placeholder={'Start from'}/>
-          <SearchBar placeholder={'Destination'}/>
-            <div className="Ride-card-content">
-              <h6 className="Ride-card-header">REGISTER</h6>
-              <h6 className="Ride-card-header--subcontent">
-                Save time and money by logging in to the app
-              </h6>
-              <div className="Ride-login-form">
-              
+        <div className="Ride-card-container">
+          <div className="Ride-map-wrapper">
+            <div className="Ride-destination-container">
+              <SearchBar placeholder={"Start from"} />
+              <SearchBar placeholder={"Destination"} />
+            </div>
+          </div>
+          <div className="Ride-result-wrapper">
+            <div className="Ride-card-component--wrapper">
+              <div>
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png"
+                  style={{ width: 40 , marginTop: 8}}
+                />
+              </div>
+              <div>
+                <p className="Ride-card-component--details">
+                  John Doe<br />
+                  <span>Route: Koramangala to Whitefield</span>
+                  <br />
+                  <span>Car: Polo</span>
+                  <span>Seats Available: 3</span>
+                </p>
+              </div>
+              <div>
+                <p className="Ride-card-component--details">
+                  <span>4.5 | *</span>
+                </p>
               </div>
             </div>
+            <FlatButton label="CONFIRM RIDE" className="Confirm-ride" />
           </div>
         </div>
       </div>
