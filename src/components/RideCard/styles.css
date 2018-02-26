@@ -1,0 +1,56 @@
+
+.Ride-card-component--wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 1rem;
+  width: 18vw;
+  cursor: pointer;
+}
+
+.Ride-card-component--wrapper:hover {
+  background: #FAFAFA;
+  cursor: pointer;
+}
+
+.pressed {
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+}
+
+.Ride-card-component--details {
+  color: #000000;
+  font-size: 0.7rem;
+}
+
+.Ride-map-wrapper {
+  background: #f4f4f4;
+  border-radius: 8px 8px 0px 0px;
+  height: 30vh;
+}
+
+.Ride-card-component--name {
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.Ride-card-component--route {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.Ride-card-component--car {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.Ride-card-component--seats {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333333;
+}

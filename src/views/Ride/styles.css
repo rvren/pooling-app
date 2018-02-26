@@ -17,50 +17,25 @@
 }
 
 .Ride-destination-container {
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
 .Ride-card-container {
   background: #FFFFFF;
   border-radius: 8px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 60%;
+  width: 70%;
   height: auto;
-}
-
-
-.Ride-card-component--wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border: 1px solid #eeeeee;
-  border-radius: 8px;
-  margin: 1rem;
-  padding: 1rem;
-  width: 15vw;
-  cursor: pointer;
-}
-
-.Ride-card-component--wrapper:hover {
-  background: #FAFAFA;
-}
-
-.Ride-card-component--details {
-  color: #000000;
-  font-size: 0.7rem;
-}
-
-.Ride-map-wrapper {
-  background: #f4f4f4;
-  border-radius: 8px 8px 0px 0px;
-  height: 30vh;
+  max-height: 90vh;
+  min-height: 90vh;
+  overflow-y: auto;
 }
 
 .Confirm-ride {
@@ -69,13 +44,22 @@
   border-radius: 250px !important;
   min-width: 15vw !important;
   width: auto !important;
-  margin: 0 auto;
+  margin: 0 auto !important;
   display: block !important;
 }
 
 .Ride-result-wrapper {
-  margin: 2rem;
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 50vh;
+  overflow-y: auto;
 }
+
 
 @media (max-width: 480px) {
 }

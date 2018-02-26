@@ -19,6 +19,7 @@ const renderFooter = () => (
       <img
         src="https://raw.githubusercontent.com/kenny-hibino/react-places-autocomplete/master/demo/images/powered_by_google_default.png"
         className="Demo__dropdown-footer-image"
+        alt="Powered by google"
       />
     </div>
   </div>

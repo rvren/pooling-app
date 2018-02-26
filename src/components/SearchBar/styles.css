@@ -33,6 +33,7 @@
   font-size: 16px;
   border-radius: 2px;
   outline: none;
+  width: 20vw;
 }
 
 .Demo__autocomplete-container {

@@ -6,11 +6,16 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 import SearchBar from "../../components/SearchBar";
 import FlatButton from "material-ui/FlatButton";
+import RideCard from "../../components/RideCard";
+import { Map, GoogleApiWrapper } from "google-maps-react";
 
 class Ride extends Component {
   constructor(props) {
     super(props);
-    this.state = { address: "" };
+    this.state = {
+      address: "",
+      numberArray: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    };
     this.onChange = address => this.setState({ address });
   }
 
@@ -39,34 +44,23 @@ class Ride extends Component {
             </div>
           </div>
           <div className="Ride-result-wrapper">
-            <div className="Ride-card-component--wrapper">
-              <div>
-                <img
-                  src="https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png"
-                  style={{ width: 40 , marginTop: 8}}
-                />
-              </div>
-              <div>
-                <p className="Ride-card-component--details">
-                  John Doe<br />
-                  <span>Route: Koramangala to Whitefield</span>
-                  <br />
-                  <span>Car: Polo</span>
-                  <span>Seats Available: 3</span>
-                </p>
-              </div>
-              <div>
-                <p className="Ride-card-component--details">
-                  <span>4.5 | *</span>
-                </p>
-              </div>
-            </div>
-            <FlatButton label="CONFIRM RIDE" className="Confirm-ride" />
+            {this.state.numberArray.map((item,index) => {
+              return <RideCard key={index} onPickRide={() => console.log(item)} />;
+            })}
           </div>
+          <FlatButton label="CONFIRM RIDE" className="Confirm-ride" />
         </div>
       </div>
     );
   }
 }
 
-export default Ride;
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyAMAeuRSqxFZzr8nppVagvLID4Y9yEIoIc"
+})(Ride);
+
+// <Map
+//   google={this.props.google}
+//   zoom={14}
+//   style={{ height: "30vh", position: "relative" }}
+// />;
