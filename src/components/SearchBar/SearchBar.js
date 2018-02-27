@@ -59,7 +59,7 @@ class SearchBar extends Component {
       address,
       loading: true
     });
-
+    this.props.getAddress(address, this.props.point);
     geocodeByAddress(address)
       .then(results => getLatLng(results[0]))
       .then(({ lat, lng }) => {

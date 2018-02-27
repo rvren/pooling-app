@@ -1,7 +1,6 @@
 
 .Ride-wrapper {
-  /* background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%); */
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   padding: 24px;
@@ -17,15 +16,16 @@
 }
 
 .Ride-destination-container {
+  margin-top: 0rem !important;
   max-width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: 0 auto;
 }
 
 .Ride-card-container {
-  background: #FFFFFF;
+  background: transparent;
   border-radius: 8px;
   position: fixed;
   top: 50%;
@@ -35,11 +35,23 @@
   height: auto;
   max-height: 90vh;
   min-height: 90vh;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .Confirm-ride {
-  background-color: #db0510 !important;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff !important;
+  border-radius: 250px !important;
+  min-width: 15vw !important;
+  width: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+.Confirm-ride--disabled {
+  background-image: linear-gradient(135deg, #eeeeee 0%, #ccc 100%);
   color: #ffffff !important;
   border-radius: 250px !important;
   min-width: 15vw !important;
@@ -49,17 +61,66 @@
 }
 
 .Ride-result-wrapper {
-  margin: auto;
-  width: 100%;
+  background: #ffffff;
   padding: 1rem;
-  padding-left: 2rem;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-height: 50vh;
+  flex-direction: column;
+  max-height: 85vh;
+  border-radius: 8px;
+  width: 25vw;
+}
+
+.Ride-result-content {
+  background: #ffffff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+  border-radius: 8px;
+  width: 25vw;
+}
+
+.Ride-map-wrapper {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px 8px 8px 8px;
+  min-height: 25vh;
+  max-height: 45vh;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
 }
 
+.Ride-result--header {
+  color: #fff;
+  border-radius: 8px 8px 0px 0px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  padding: 1rem;
+  margin: -1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  font-size: 1rem;
+}
+
+.Ride-destination--title {
+  color: #ccc;
+  font-size: 0.8rem;
+  margin-bottom: -1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 0.2rem;
+  text-emphasis: transform;;
+}
+
+.Fetch-primary {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff !important;
+  border-radius: 250px !important;
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem !important;
+  z-index: 0;
+}
 
 @media (max-width: 480px) {
 }

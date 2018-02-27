@@ -33,15 +33,15 @@ class RideCard extends Component {
           <img
             src="https://d30y9cdsu7xlg0.cloudfront.net/png/214280-200.png"
             style={{
-              width: 60,
-              marginTop: 8,
-              background: "#EEE",
+              width: 40,
+              marginTop: 12,
+              background: "#fff",
               borderRadius: 50
             }}
             alt="avatar"
           />
         </div>
-        <div>
+        <div className="Ride-card-component--ride-details">
           <p className="Ride-card-component--details">
             <span className="Ride-card-component--name">John Doe</span>
             <br />
@@ -57,9 +57,9 @@ class RideCard extends Component {
             </span>
           </p>
         </div>
-        <div>
+        <div className="Ride-card-component--ride-rating">
           <p className="Ride-card-component--details">
-            <span className="Ride-card-component--rating">4.5 | *</span>
+            <span className="Ride-card-component--rating">4.5</span>
           </p>
         </div>
       </div>

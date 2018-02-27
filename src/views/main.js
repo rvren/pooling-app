@@ -11,7 +11,7 @@ const muiTheme = getMuiTheme({
   fontFamily: "Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif",
   palette: {
     textColor: "#000000",
-    primary1Color: "#e50914",
+    primary1Color: "#764ba2",
     canvasColor: '#000',
   }
 });
