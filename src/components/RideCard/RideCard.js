@@ -27,6 +27,7 @@ class RideCard extends Component {
     var textClass = classNames({
       textPressed: this.state.textPressed
     });
+    const iterator = this.props.route;
     return (
       <div className={btnClass} onClick={() => this._onRideTap()}>
         <div>
@@ -43,24 +44,22 @@ class RideCard extends Component {
         </div>
         <div className="Ride-card-component--ride-details">
           <p className="Ride-card-component--details">
-            <span className="Ride-card-component--name">John Doe</span>
+            <span className="Ride-card-component--name">{iterator.host_name}</span>
             <br />
             <span className="Ride-card-component--route">
-              Route: Koramangala to Whitefield
+              Route: {iterator.start_point} to {iterator.end_point}
             </span>
             <br />
-            <span className="Ride-card-component--car">Car: Polo</span>
+            <span className="Ride-card-component--car">Car: {iterator.car}</span>
             <br />
             <span className="Ride-card-component--seats">
               {" "}
-              Seats Available: 3
+              Seats Available: {iterator.available_seats}
             </span>
           </p>
         </div>
         <div className="Ride-card-component--ride-rating">
-          <p className="Ride-card-component--details">
-            <span className="Ride-card-component--rating">4.5</span>
-          </p>
+          <span className="Ride-card-component--rating">{iterator.rating ? iterator.rating : 'NA'}</span>
         </div>
       </div>
     );

@@ -85,7 +85,9 @@
   padding: 16px;
   border-radius: 8px 8px 8px 8px;
   min-height: 25vh;
-  max-height: 45vh;
+  max-height: 40vh;
+  height: auto;
+  width: 35vw;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -116,10 +118,17 @@
   color: #ffffff !important;
   border-radius: 250px !important;
   width: 100% !important;
-  display: flex;
-  flex-direction: row;
-  margin-top: 4rem !important;
-  z-index: 0;
+  max-width: 32vw !important;
+  margin-top: 2.5rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.Ride-result--error-text {
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+  margin: 0 auto;
 }
 
 @media (max-width: 480px) {

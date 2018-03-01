@@ -60,22 +60,6 @@ class SearchBar extends Component {
       loading: true
     });
     this.props.getAddress(address, this.props.point);
-    geocodeByAddress(address)
-      .then(results => getLatLng(results[0]))
-      .then(({ lat, lng }) => {
-        console.log("Geocode Success", { lat, lng });
-        this.setState({
-          geocodeResults: this.renderGeocodeSuccess(lat, lng),
-          loading: false
-        });
-      })
-      .catch(error => {
-        console.log("Geocode Error", error);
-        this.setState({
-          geocodeResults: this.renderGeocodeFailure(error),
-          loading: false
-        });
-      });
   }
 
   handleChange(address) {
