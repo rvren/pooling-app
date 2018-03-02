@@ -51,7 +51,6 @@ class Login extends Component {
   }
 
   _validateUser() {
-    console.log(this.state.users)
     let result = this.state.users.filter((item) => (item.mobile === this.state.username || item.email === this.state.username) && item.password === this.state.password);
     if (result && result.length > 0) {
       window.location = "/ride";

@@ -57,7 +57,7 @@ class Register extends Component {
       this.setState({
         errorMessage: "Registration successfull"
       });
-      this.props.history.push('/ride');
+      window.location = "/ride";
     }
   }
 
