@@ -3,13 +3,22 @@ import "./styles.css";
 import TextField from "material-ui/TextField";
 import { Link } from "react-router-dom";
 import Legend from "../Legend";
+import { firebaseApp } from "../../config/firebase";
 import FlatButton from "material-ui/FlatButton";
+import {withRouter} from 'react-router-dom';
+
+let userRef = firebaseApp
+  .database()
+  .ref("users")
+  .limitToLast(100);
+
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorMessage: undefined
+      errorMessage: undefined,
+      users: undefined
     };
     this._handleChange = this._handleChange.bind(this);
   }
@@ -37,7 +46,27 @@ class Login extends Component {
       this.setState({
         errorMessage: "Autenticating user"
       });
+      this._validateUser();
     }
+  }
+
+  _validateUser() {
+    let result = this.state.users.filter((item) => (item.mobile == this.state.username || item.email == this.state.username) && item.password === this.state.password);
+    if (result && result.length > 0) {
+      this.props.history.push('/ride');
+    } else {
+      this.setState({
+        errorMessage: "Autentication failed"
+      });
+    }
+  }
+
+  componentDidMount() {
+    userRef.on("value", snapshot => {
+      this.setState({
+        users: Object.values(snapshot.val()),
+      });
+    });
   }
 
   render() {
@@ -56,6 +85,7 @@ class Login extends Component {
                   hintText="10-digit mobile number or email ID"
                   floatingLabelText="Username"
                   className="Input-text"
+                  type="text"
                   name="username"
                   onChange={this._handleChange}
                 />

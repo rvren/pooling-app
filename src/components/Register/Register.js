@@ -4,6 +4,9 @@ import TextField from "material-ui/TextField";
 import FlatButton from "material-ui/FlatButton";
 import { Link } from "react-router-dom";
 import Legend from "../Legend";
+import { firebaseApp } from "../../config/firebase";
+import {withRouter} from 'react-router-dom';
+import Ride from "../../views/Ride";
 
 class Register extends Component {
   constructor(props) {
@@ -40,9 +43,21 @@ class Register extends Component {
       });
       return false;
     } else {
+      let user_details = {
+        username : this.state.username,
+        email: this.state.email,
+        mobile: this.state.mobile,
+        password: this.state.password,
+        model: this.state.model
+      }
+      firebaseApp
+          .database()
+          .ref("/users/" + this.state.mobile)
+          .set(user_details);
       this.setState({
         errorMessage: "Registration successfull"
       });
+      this.props.history.push('/ride');
     }
   }
 

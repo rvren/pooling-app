@@ -16,7 +16,7 @@ let messagesRef = firebaseApp
   .limitToLast(100);
 
 const noresultsOptions = {
-  loop: true,
+  loop: false,
   autoplay: true,
   animationData: noresults
 };
@@ -77,7 +77,6 @@ class Ride extends Component {
 
   _enableButton() {
     if (this.state.startingPoint && this.state.endingPoint) {
-      console.log("inside");
       this.setState({
         isDisabled: false
       });

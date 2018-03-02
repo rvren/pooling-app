@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions'
-import HackerEarthClient from '../api'
+import client from '../api'
 
 // NAMES
 export const REGISTER_REQUEST = 'REGISTER_REQUEST';
@@ -12,10 +12,10 @@ export const  registerReceive = createAction(REGISTER_RECEIVE);
 export const  registerError = createAction(REGISTER_ERROR);
 
 // ACTIONS
-export const getProductList = () => {
+export const registerUser = () => {
     return function(dispatch, getState) {
         dispatch( registerRequest());
-        HackerEarthClient.getAllProducts()
+        client.getAllProducts()
         .then(result => {
           dispatch(registerReceive(result))
         }).catch(err => {
