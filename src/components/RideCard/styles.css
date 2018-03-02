@@ -33,42 +33,56 @@
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1.2rem;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000000;
+  position: relative;
+  top: -0.5rem;
+  left: -0.5rem;
 }
 
 .Ride-card-component--route {
   font-size: 0.6rem;
   font-weight: 500;
-  color: #333333;
+  color: #b0b0b0;
+  position: relative;
+  top: -0.5rem;
+  left: -0.5rem;
 }
 
 .Ride-card-component--car {
   font-size: 0.6rem;
   font-weight: 500;
-  color: #333333;
+  color: #b0b0b0;
+  position: relative;
+  top: -0.3rem;
+  left: -0.5rem;
 }
 
 .Ride-card-component--seats {
   font-size: 0.6rem;
   font-weight: 500;
-  color: #333333;
+  color: #000000;
+  font-style: italic;
+  position: relative;
+  top: 1rem;
+  left: -4rem;
 }
 
 .Ride-card-component--rating {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: #fff;
   font-weight: 600;
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 12px;
-  height: 20px;
-  width: 20px;
-  min-height: 20px;
-  min-width: 20px;
-  max-height: 20px;
-  max-width: 20px;
+  padding: 8px;
+  height: 15px;
+  width: 15px;
+  min-height: 15px;
+  min-width: 15px;
+  max-height: 15px;
+  max-width: 15px;
   border-radius: 50%;
+  position: relative;
+  top: -0.4rem;
+  right: -0.5rem;
 }
 
 .Ride-card-component--ride-details {
@@ -80,4 +94,23 @@
   position: absolute;
   right: 5vw;
   margin-top: 1rem;
+}
+
+.Ride-card-component--eta {
+  font-style: italic;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #000000;
+  position: relative;
+  left: -0.5rem;
+}
+
+.Ride-card-component--ride-avatar {
+  position: relative;
+  top: -1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 0.6rem;
+  border: 3px solid #667eea;
 }

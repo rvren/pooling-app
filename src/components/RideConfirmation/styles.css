@@ -1,0 +1,120 @@
+
+.Ride-confirmation-component--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: auto;
+  min-height: 7vh;
+  cursor: pointer;
+  background: #fff;
+}
+
+.Ride-confirmation-component--wrapper:hover {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pressed{
+  border: 1px solid #CCCC;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.Ride-confirmation-component--details {
+  color: #000000;
+  font-size: 0.7rem;
+}
+
+.Ride-confirmation-component--name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Ride-confirmation-component--route {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.Ride-confirmation-component--car {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.Ride-confirmation-component--seats {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.Ride-confirmation-component--rating {
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: 600;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 12px;
+  height: 20px;
+  width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  border-radius: 50%;
+}
+
+.Ride-confirmation-component--ride-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Ride-confirmation-component--ride-rating {
+  position: absolute;
+  right: 5vw;
+  margin-top: 1rem;
+}
+
+.Ride-confirmation-component--back {
+  color: #000000;
+}
+
+.Return-primary {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff !important;
+  border-radius: 250px !important;
+  width: 70% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.Ride-confirmation-component--ride-avatar {
+  position: relative;
+  top: -1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 0.6rem;
+  border: 3px solid #667eea;
+}
+
+.Ride-confirmation-component--message {
+  color: #000000;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+.Ride-confirmation-component--return {
+  color: #667eea;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

@@ -32,13 +32,8 @@ class RideCard extends Component {
       <div className={btnClass} onClick={() => this._onRideTap()}>
         <div>
           <img
-            src="https://d30y9cdsu7xlg0.cloudfront.net/png/214280-200.png"
-            style={{
-              width: 40,
-              marginTop: 12,
-              background: "#fff",
-              borderRadius: 50
-            }}
+            src={iterator.image_url}
+            className="Ride-card-component--ride-avatar"
             alt="avatar"
           />
         </div>
@@ -52,8 +47,9 @@ class RideCard extends Component {
             <br />
             <span className="Ride-card-component--car">Car: {iterator.car}</span>
             <br />
+            <span className="Ride-card-component--eta">{iterator.eta ? iterator.eta : 'NA'}</span>
+            <br />
             <span className="Ride-card-component--seats">
-              {" "}
               Seats Available: {iterator.available_seats}
             </span>
           </p>

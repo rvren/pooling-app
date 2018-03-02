@@ -6,6 +6,40 @@ import Legend from "../Legend";
 import FlatButton from "material-ui/FlatButton";
 
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      errorMessage: undefined
+    };
+    this._handleChange = this._handleChange.bind(this);
+  }
+
+  _handleChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value
+    });
+  }
+
+  _validateForm() {
+    if (
+      !this.state.username ||
+      this.state.username.length < 4 ||
+      !this.state.password
+    ) {
+      this.setState({
+        errorMessage: "Field Validation error"
+      });
+      return false;
+    } else {
+      this.setState({
+        errorMessage: "Autenticating user"
+      });
+    }
+  }
+
   render() {
     return (
       <div className="Wrapper">
@@ -22,19 +56,31 @@ class Login extends Component {
                   hintText="10-digit mobile number or email ID"
                   floatingLabelText="Username"
                   className="Input-text"
+                  name="username"
+                  onChange={this._handleChange}
                 />
                 <TextField
                   hintText="Enter your secret password"
                   floatingLabelText="Password"
                   className="Input-text"
+                  type="password"
+                  name="password"
+                  onChange={this._handleChange}
                 />
                 <br />
-                <FlatButton label="LOGIN" className="Cta-primary" />
+                <FlatButton
+                  label="LOGIN"
+                  className="Cta-primary"
+                  onClick={() => this._validateForm()}
+                />
                 <p className="Register-content--text">
                   Don't have an account?
                   <Link to="/register" className="Register-content--subtext">
                     <span> REGISTER NOW</span>
                   </Link>
+                </p>
+                <p className="Register-content--message">
+                  {this.state.errorMessage}
                 </p>
               </div>
             </div>

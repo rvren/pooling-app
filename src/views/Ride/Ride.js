@@ -3,7 +3,7 @@ import "./styles.css";
 import SearchBar from "../../components/SearchBar";
 import FlatButton from "material-ui/FlatButton";
 import RideCard from "../../components/RideCard";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import RideConfirmation from "../../components/RideConfirmation";
 import { firebaseApp } from "../../config/firebase";
 import Dialog from "material-ui/Dialog";
 import Lottie from "react-lottie";
@@ -43,6 +43,7 @@ class Ride extends Component {
       isDisabled: true,
       isFetched: false,
       displayText: route_text,
+      selectedHost: null,
       open: false
     };
   }
@@ -83,12 +84,22 @@ class Ride extends Component {
     }
   }
 
-  _handleOpen = () => {
-    this.setState({ open: true });
+  _handleOpen = item => {
+    this.setState({
+      open: true,
+      selectedHost: item
+    });
   };
 
   _handleClose = () => {
     this.setState({ open: false });
+  };
+
+  _swicthView = () => {
+    this.setState({
+      open: false,
+      selectedHost: null
+    });
   };
 
   filterResults() {
@@ -100,20 +111,13 @@ class Ride extends Component {
       );
       this.setState({
         filteredRoutes: filteredResult,
-        displayText: filter_text
+        displayText: filter_text,
+        open: false
       });
     }
   }
 
   render() {
-    const inputProps = {
-      value: this.state.address,
-      onChange: this.onChange
-    };
-    const actions = [
-      <FlatButton label="Cancel" primary={true} onClick={this._handleClose} />,
-      <FlatButton label="Discard" primary={true} onClick={this._handleClose} />
-    ];
     return (
       <div className="Ride-wrapper">
         <div className="Ride-card-container">
@@ -148,15 +152,22 @@ class Ride extends Component {
               {this.state.displayText}
             </span>
             <div className="Ride-result-content">
-              {this.state.filteredRoutes.map((item, index) => {
-                return (
-                  <RideCard
-                    key={index}
-                    route={item}
-                    onPickRide={this._handleOpen.bind(this, item)}
-                  />
-                );
-              })}
+              {this.state.open ? (
+                <RideConfirmation
+                  host={this.state.selectedHost}
+                  returnView={this._swicthView}
+                />
+              ) : (
+                this.state.filteredRoutes.map((item, index) => {
+                  return (
+                    <RideCard
+                      key={index}
+                      route={item}
+                      onPickRide={this._handleOpen.bind(this, item)}
+                    />
+                  );
+                })
+              )}
               {this.state.filteredRoutes.length === 0 &&
                 this.state.isFetched && (
                   <div>
@@ -184,14 +195,6 @@ class Ride extends Component {
               )}
             </div>
           </div>
-          <Dialog
-            actions={actions}
-            modal={false}
-            open={this.state.open}
-            onRequestClose={this._handleClose}
-          >
-            Discard draft?
-          </Dialog>
         </div>
       </div>
     );

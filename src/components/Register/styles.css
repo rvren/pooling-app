@@ -25,6 +25,9 @@
   color: #ffffff !important;
   border-radius: 250px !important;
   width: 100% !important;
+  height: 40px !important;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 .Card-header {
@@ -55,6 +58,14 @@
   color: #CCCCCC;
   text-align: center;
   margin: 2rem;
+}
+
+.Register-content--message {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e50913;
+  text-align: center;
+  margin: 0rem;
 }
 
 .Register-content--subtext {

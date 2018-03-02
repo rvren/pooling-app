@@ -61,7 +61,7 @@
 }
 
 .Ride-result-wrapper {
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@
 }
 
 .Ride-result-content {
-  background: #ffffff;
+  background: #FFFFFF;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@
 }
 
 .Ride-map-wrapper {
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 16px;
   border-radius: 8px 8px 8px 8px;
   min-height: 25vh;
@@ -102,15 +102,15 @@
   margin-bottom: 1rem;
   position: relative;
   font-size: 1rem;
+  text-align: center;
 }
 
 .Ride-destination--title {
-  color: #ccc;
+  color: #AAAAAA;
   font-size: 0.8rem;
   margin-bottom: -1.5rem;
   margin-top: 1.5rem;
   margin-left: 0.2rem;
-  text-emphasis: transform;;
 }
 
 .Fetch-primary {
