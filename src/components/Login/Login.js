@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Legend from "../Legend";
 import { firebaseApp } from "../../config/firebase";
 import FlatButton from "material-ui/FlatButton";
-import {withRouter} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 let userRef = firebaseApp
   .database()
@@ -51,9 +51,10 @@ class Login extends Component {
   }
 
   _validateUser() {
-    let result = this.state.users.filter((item) => (item.mobile == this.state.username || item.email == this.state.username) && item.password === this.state.password);
+    console.log(this.state.users)
+    let result = this.state.users.filter((item) => (item.mobile === this.state.username || item.email === this.state.username) && item.password === this.state.password);
     if (result && result.length > 0) {
-      this.props.history.push('/ride');
+      window.location = "/ride";
     } else {
       this.setState({
         errorMessage: "Autentication failed"
@@ -84,6 +85,7 @@ class Login extends Component {
                 <TextField
                   hintText="10-digit mobile number or email ID"
                   floatingLabelText="Username"
+                  floatingLabelFixed={true}
                   className="Input-text"
                   type="text"
                   name="username"
@@ -92,6 +94,7 @@ class Login extends Component {
                 <TextField
                   hintText="Enter your secret password"
                   floatingLabelText="Password"
+                  floatingLabelFixed={true}
                   className="Input-text"
                   type="password"
                   name="password"
