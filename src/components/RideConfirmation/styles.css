@@ -118,3 +118,9 @@
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+@media (max-width: 480px) {
+  .Ride-confirmation-component--wrapper {
+    min-height: 70vh;
+  }
+}

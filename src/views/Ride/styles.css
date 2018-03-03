@@ -133,13 +133,13 @@
   .Ride-card-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    height: auto;
   }
 
   .Ride-map-wrapper {
-    width: 95%;
+    width: 100%;
     margin-left: -2rem;
-    height: 10vh;
+    min-height: 45vh;
   }
 
   .Ride-destination--title {
@@ -151,9 +151,10 @@
   }
 
   .Ride-result-wrapper {
-    width: 95%;
+    width: 100%;
     margin-left: -2rem;
     margin-top: 1rem;
+    min-height: 40vh;
   }
 
   .Ride-result-content {
