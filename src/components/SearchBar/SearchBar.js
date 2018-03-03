@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng
-} from "react-places-autocomplete";
+import PlacesAutocomplete from "react-places-autocomplete";
 import "./styles.css";
 
 const renderSuggestion = ({ formattedSuggestion }) => (
@@ -78,11 +75,7 @@ class SearchBar extends Component {
   }
 
   renderGeocodeSuccess(lat, lng) {
-    return (
-      <div className="alert alert-success" role="alert">
-       
-      </div>
-    );
+    return <div className="alert alert-success" role="alert" />;
   }
 
   render() {

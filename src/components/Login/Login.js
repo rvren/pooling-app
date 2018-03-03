@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 import Legend from "../Legend";
 import { firebaseApp } from "../../config/firebase";
 import FlatButton from "material-ui/FlatButton";
-import {Redirect} from 'react-router-dom';
 
 let userRef = firebaseApp
   .database()
   .ref("users")
   .limitToLast(100);
-
 
 class Login extends Component {
   constructor(props) {
@@ -51,7 +49,12 @@ class Login extends Component {
   }
 
   _validateUser() {
-    let result = this.state.users.filter((item) => (item.mobile === this.state.username || item.email === this.state.username) && item.password === this.state.password);
+    let result = this.state.users.filter(
+      item =>
+        (item.mobile === this.state.username ||
+          item.email === this.state.username) &&
+        item.password === this.state.password
+    );
     if (result && result.length > 0) {
       window.location = "/ride";
     } else {
@@ -64,7 +67,7 @@ class Login extends Component {
   componentDidMount() {
     userRef.on("value", snapshot => {
       this.setState({
-        users: Object.values(snapshot.val()),
+        users: Object.values(snapshot.val())
       });
     });
   }
@@ -78,7 +81,7 @@ class Login extends Component {
             <div className="Card-content">
               <h6 className="Card-header">LOGIN</h6>
               <h6 className="Card-header--subcontent">
-                Save time and money by logging in to the app
+                Secured and Hassle Free mode of commuting!
               </h6>
               <div className="Login-form">
                 <TextField

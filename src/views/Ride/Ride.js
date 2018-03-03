@@ -5,7 +5,6 @@ import FlatButton from "material-ui/FlatButton";
 import RideCard from "../../components/RideCard";
 import RideConfirmation from "../../components/RideConfirmation";
 import { firebaseApp } from "../../config/firebase";
-import Dialog from "material-ui/Dialog";
 import Lottie from "react-lottie";
 import * as loading from "../../assets/loading";
 import * as noresults from "../../assets/noresults";
@@ -33,8 +32,6 @@ const filter_text = "Personalized routes";
 class Ride extends Component {
   constructor(props) {
     super(props);
-
-    let routes = [];
     this.state = {
       startingPoint: null,
       endingPoint: null,

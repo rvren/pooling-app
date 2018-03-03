@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./styles.css";
-import classNames from "classnames";
 import Lottie from "react-lottie";
 import * as confirmation from "../../assets/confirmation";
 import FlatButton from "material-ui/FlatButton";
@@ -12,9 +11,6 @@ const confirmationOptions = {
 };
 
 class RideConfirmation extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const iterator = this.props.host;

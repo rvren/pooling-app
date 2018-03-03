@@ -24,9 +24,6 @@ class RideCard extends Component {
     var btnClass = classNames("Ride-card-component--wrapper", {
       pressed: this.state.isPressed
     });
-    var textClass = classNames({
-      textPressed: this.state.textPressed
-    });
     const iterator = this.props.route;
     return (
       <div className={btnClass} onClick={() => this._onRideTap()}>
