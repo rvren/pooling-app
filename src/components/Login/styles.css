@@ -20,7 +20,6 @@
   min-width: 25vw;
 }
 
-
 .Cta-primary {
   background-color: #764ba2 !important;
   color: #ffffff !important;
@@ -53,7 +52,7 @@
 
 .Register-content--text {
   font-size: 0.8rem;
-  color: #CCCCCC;
+  color: #cccccc;
   text-align: center;
   margin: 2rem;
 }
@@ -76,4 +75,9 @@
 }
 
 @media (max-width: 480px) {
+  .Card-container {
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }

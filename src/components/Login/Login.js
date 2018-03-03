@@ -77,7 +77,7 @@ class Login extends Component {
       <div className="Wrapper">
         <div className="Content-wrapper">
           <div className="Card-container">
-            <Legend />
+            <Legend/>
             <div className="Card-content">
               <h6 className="Card-header">LOGIN</h6>
               <h6 className="Card-header--subcontent">

@@ -1,4 +1,3 @@
-
 .Pool-header {
   color: #fff;
   margin: 4rem;
@@ -16,7 +15,8 @@
 }
 
 .Pool-content {
-  background: url(http://mobi-platform.com/wp-content/uploads/2014/07/Rideshare-superJumbo.jpg), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: url(http://mobi-platform.com/wp-content/uploads/2014/07/Rideshare-superJumbo.jpg),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,4 +37,7 @@
 }
 
 @media (max-width: 480px) {
+  .Pool-content {
+    display: none;
+  }
 }
