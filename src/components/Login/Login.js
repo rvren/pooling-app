@@ -94,7 +94,6 @@ class Login extends Component {
                 <TextField
                   hintText="10-digit mobile number or email ID"
                   floatingLabelText="Username"
-                  floatingLabelFixed={true}
                   className="Input-text"
                   type="text"
                   name="username"
@@ -103,7 +102,6 @@ class Login extends Component {
                 <TextField
                   hintText="Enter your secret password"
                   floatingLabelText="Password"
-                  floatingLabelFixed={true}
                   className="Input-text"
                   type="password"
                   name="password"
