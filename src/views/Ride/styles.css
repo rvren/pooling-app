@@ -139,7 +139,8 @@
   .Ride-map-wrapper {
     width: 100%;
     margin-left: -2rem;
-    min-height: 45vh;
+    min-height: 50vh;
+    height: 50vh !important;
   }
 
   .Ride-destination--title {

@@ -49,6 +49,7 @@ class Login extends Component {
   }
 
   _validateUser() {
+    console.log(this.state.users)
     if (this.state.users) {
       let result = this.state.users.filter(
         item =>

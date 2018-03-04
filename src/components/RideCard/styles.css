@@ -122,4 +122,14 @@
   .Ride-card-component--wrapper {
     min-height: 11vh;
   }
+
+  .Ride-card-component--seats {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #000000;
+    font-style: italic;
+    position: relative;
+    top: 0.5rem;
+    left: -4rem;
+  }
 }
